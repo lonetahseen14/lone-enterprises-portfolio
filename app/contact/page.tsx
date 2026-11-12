@@ -1,45 +1,49 @@
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ContactForm from "./ContactForm";
+
 import {
   Mail,
   Phone,
   MapPin,
   Clock,
-  Send,
   MessageSquare,
+  MessageCircle,
 } from "lucide-react";
 
 const contactDetails = [
   {
     icon: Phone,
     title: "Phone",
-    value: "Add your business phone number",
+    value: "+91 9186277731",
   },
   {
     icon: Mail,
     title: "Email",
-    value: "Add your business email",
+    value: "loneenterpriseskup1@gmail.com",
   },
   {
     icon: MapPin,
     title: "Office Location",
-    value: "Add your business address",
+    value: "Awoora, Kupwara 193222, Jammu & Kashmir, India",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    value: "Add your working hours",
+    value: "Monday - Saturday: 9:00 AM - 6:00 PM",
   },
 ];
 
 export default function ContactPage() {
+  const whatsappLink =
+    "https://wa.me/919186277731?text=Hello%20LONE%20ENTERPRISES,%20I%20want%20to%20make%20an%20enquiry.";
+
   return (
     <>
       <Navbar />
 
       <main>
-        {/* Hero */}
         <section className="bg-[#142d4e] px-6 py-24 text-center text-white">
           <p className="mb-4 font-semibold uppercase tracking-[3px] text-green-400">
             Get in Touch
@@ -55,7 +59,6 @@ export default function ContactPage() {
           </p>
         </section>
 
-        {/* Contact Information */}
         <section className="px-6 py-20">
           <div className="mx-auto max-w-6xl">
             <div className="mb-12 text-center">
@@ -85,7 +88,7 @@ export default function ContactPage() {
                       {item.title}
                     </h3>
 
-                    <p className="text-sm leading-6 text-gray-600">
+                    <p className="break-words text-sm leading-6 text-gray-600">
                       {item.value}
                     </p>
                   </div>
@@ -95,7 +98,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Enquiry Form */}
         <section className="bg-[#f3f6f9] px-6 py-20">
           <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
             <div className="flex flex-col justify-center">
@@ -115,10 +117,19 @@ export default function ContactPage() {
                 details with us.
               </p>
 
-              <p className="leading-8 text-gray-600">
-                Our contact information can also be used to reach the
-                business directly.
+              <p className="mb-8 leading-8 text-gray-600">
+                Our team will review your enquiry and get in touch with you.
               </p>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-fit items-center gap-3 rounded-lg bg-green-600 px-6 py-4 font-semibold text-white transition hover:bg-green-700"
+              >
+                <MessageCircle size={22} />
+                Chat with Us on WhatsApp
+              </a>
             </div>
 
             <div className="rounded-2xl bg-white p-8 shadow-sm md:p-10">
@@ -126,113 +137,11 @@ export default function ContactPage() {
                 Send an Enquiry
               </h3>
 
-              <form className="space-y-5">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-2 block text-sm font-semibold text-gray-700"
-                  >
-                    Full Name
-                  </label>
-
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Enter your name"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-sm font-semibold text-gray-700"
-                  >
-                    Email Address
-                  </label>
-
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="mb-2 block text-sm font-semibold text-gray-700"
-                  >
-                    Phone Number
-                  </label>
-
-                  <input
-                    id="phone"
-                    type="tel"
-                    placeholder="Enter your phone number"
-                    className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="mb-2 block text-sm font-semibold text-gray-700"
-                  >
-                    Enquiry Type
-                  </label>
-
-                  <select
-                    id="subject"
-                    defaultValue=""
-                    className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600"
-                  >
-                    <option value="" disabled>
-                      Select enquiry type
-                    </option>
-                    <option value="contracting">Contracting</option>
-                    <option value="supply">Supply</option>
-                    <option value="project">Project Enquiry</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-semibold text-gray-700"
-                  >
-                    Your Message
-                  </label>
-
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Write your message..."
-                    className="w-full resize-none rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600"
-                  />
-                </div>
-
-                <button
-                  type="button"
-                  disabled
-                  className="flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-lg bg-green-700 px-6 py-3 font-semibold text-white opacity-70"
-                >
-                  <Send size={18} />
-                  Form Setup Pending
-                </button>
-
-                <p className="text-xs leading-5 text-gray-500">
-                  This is currently a visual form. Message submission will
-                  be enabled after connecting a backend.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>
 
-        {/* Final CTA */}
         <section className="bg-[#142d4e] px-6 py-16 text-center text-white">
           <h2 className="mb-4 text-3xl font-bold">
             LONE ENTERPRISES

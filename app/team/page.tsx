@@ -11,7 +11,7 @@ import {
 const teamMembers = [
   {
     role: "Owner / Founder",
-    name: "M/S Tariq Ahmad lone",
+    name: "M/S Tariq Ahmad Lone",
     image: "/team/owner.jpg",
     description:
       "Responsible for the company's overall direction, business decisions and development.",
