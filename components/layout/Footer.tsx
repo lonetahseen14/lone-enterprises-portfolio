@@ -49,10 +49,9 @@ export default function Footer() {
           <h3 className="mb-6 text-lg font-bold">Contact Information</h3>
 
           <p className="text-sm leading-7 text-slate-300">
-            Address: Awoora Kupwara 193222, Jammu & Kashmir, India
-            Phone: +91 91862 77731
-            Email: loneenterpriseskup1@gmail.com
-            
+           <p> Address: Awoora Kupwara 193222, Jammu & Kashmir, India</p>
+            <p>Phone: +91 91862 77731</p>
+            <p>Email: loneenterpriseskup1@gmail.com</p>
           </p>
         </div>
 
