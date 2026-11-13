@@ -6,11 +6,13 @@ import AboutPreview from "@/components/sections/AboutPreview";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import LeadershipPreview from "@/components/sections/LeadershipPreview";
 import ProjectsPreview from "@/components/sections/ProjectsPreview";
+import LocalBusinessSchema from "@/components/LocalBusinessSchema";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <LocalBusinessSchema />
 
       <main>
         <Hero />
