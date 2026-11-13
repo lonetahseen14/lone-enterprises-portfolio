@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import type { Metadata } from "next";
 import {
   Building2,
   PackageCheck,
@@ -73,6 +74,27 @@ const services = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: "Contracting & Supply Services in Kupwara",
+
+  description:
+    "Explore LONE ENTERPRISES contracting, supply, project management, site operations and logistics services in Awoora, Kupwara, Jammu and Kashmir.",
+
+  alternates: {
+    canonical: "/services",
+  },
+
+  openGraph: {
+    title: "Our Services | LONE ENTERPRISES",
+    description:
+      "Discover contracting and supply solutions by LONE ENTERPRISES in Kupwara, Jammu and Kashmir.",
+    url: "/services",
+    siteName: "LONE ENTERPRISES",
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
 export default function ServicesPage() {
   return (
     <>
@@ -89,8 +111,9 @@ export default function ServicesPage() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-300">
-            Contracting and supply solutions focused on professionalism,
-            reliability and quality.
+            LONE ENTERPRISES, based in Awoora, Kupwara, Jammu and Kashmir,
+            provides contracting, supply, project coordination and
+            logistics solutions based on client requirements.
           </p>
         </section>
 
@@ -106,9 +129,9 @@ export default function ServicesPage() {
               </h2>
 
               <p className="leading-8 text-gray-600">
-                LONE ENTERPRISES aims to provide organised contracting and
-                supply solutions based on client requirements and project
-                needs.
+                From contracting and material supply to project coordination
+                and logistics, LONE ENTERPRISES focuses on organised service
+                delivery for clients in Kupwara and surrounding areas.
               </p>
             </div>
 

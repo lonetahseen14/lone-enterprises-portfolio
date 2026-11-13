@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import {
@@ -10,6 +11,24 @@ import {
   Award,
   Building2,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "About LONE ENTERPRISES | Contractor in Kupwara",
+  description:
+    "Learn about LONE ENTERPRISES, a contracting and supply business based in Awoora, Kupwara, Jammu and Kashmir. Discover our mission, vision and professional values.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About LONE ENTERPRISES | Kupwara",
+    description:
+      "Get to know LONE ENTERPRISES, its mission, vision and commitment to contracting and supply services in Kupwara, Jammu and Kashmir.",
+    url: "/about",
+    siteName: "LONE ENTERPRISES",
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 const values = [
   {
@@ -55,7 +74,8 @@ export default function AboutPage() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-300">
-            Your trusted partner for contracting and supply solutions.
+            Learn about LONE ENTERPRISES, a contracting and supply business
+            based in Awoora, Kupwara, Jammu and Kashmir.
           </p>
         </section>
 
@@ -82,10 +102,10 @@ export default function AboutPage() {
               </h2>
 
               <p className="mb-5 leading-8 text-gray-600">
-                LONE ENTERPRISES is a contracting and supply business focused
-                on providing dependable services and solutions. We aim to
-                build lasting professional relationships through responsible
-                work practices and a commitment to quality.
+                LONE ENTERPRISES is a contracting and supply business based in
+                Awoora, Kupwara, Jammu and Kashmir. We focus on providing
+                dependable contracting and supply solutions through responsible
+                work practices and a commitment to professional standards.
               </p>
 
               <p className="leading-8 text-gray-600">

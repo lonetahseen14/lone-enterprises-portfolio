@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "./ContactForm";
@@ -11,6 +12,24 @@ import {
   MessageSquare,
   MessageCircle,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact LONE ENTERPRISES | Contractor in Kupwara",
+  description:
+    "Contact LONE ENTERPRISES in Awoora, Kupwara, Jammu and Kashmir for contracting, construction and material supply enquiries. Call, email or contact us on WhatsApp.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Us | LONE ENTERPRISES",
+    description:
+      "Get in touch with LONE ENTERPRISES for contracting, construction and supply enquiries in Kupwara, Jammu and Kashmir.",
+    url: "/contact",
+    siteName: "LONE ENTERPRISES",
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 const contactDetails = [
   {
@@ -26,7 +45,7 @@ const contactDetails = [
   {
     icon: MapPin,
     title: "Office Location",
-    value: "Awoora, Kupwara 193222, Jammu & Kashmir, India",
+    value: "Awoora, Kupwara 193224, Jammu & Kashmir, India",
   },
   {
     icon: Clock,

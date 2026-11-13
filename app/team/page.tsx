@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import {
@@ -7,6 +8,24 @@ import {
   BriefcaseBusiness,
   ArrowRight,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Our Team | LONE ENTERPRISES Kupwara",
+  description:
+    "Meet the leadership behind LONE ENTERPRISES, a contracting and supply business based in Awoora, Kupwara, Jammu and Kashmir. Learn about our management and team responsibilities.",
+  alternates: {
+    canonical: "/team",
+  },
+  openGraph: {
+    title: "Meet Our Team | LONE ENTERPRISES",
+    description:
+      "Get to know the leadership and management team of LONE ENTERPRISES in Kupwara, Jammu and Kashmir.",
+    url: "/team",
+    siteName: "LONE ENTERPRISES",
+    locale: "en_IN",
+    type: "website",
+  },
+};
 
 const teamMembers = [
   {
@@ -42,8 +61,9 @@ export default function TeamPage() {
           </h1>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-300">
-            A team built on responsibility, coordination and a shared
-            commitment to professional work.
+            Meet the people behind LONE ENTERPRISES, based in Awoora,
+            Kupwara, Jammu and Kashmir, and learn about their roles
+            in managing business activities and project coordination.
           </p>
         </section>
 
